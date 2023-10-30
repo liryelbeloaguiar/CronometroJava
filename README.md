@@ -10,5 +10,5 @@ Cronometro simples - aula - Java para iniciantes
 - Para
 - Zera
 
-! [ Erro na imagem ](URL_da_Imagem)
+![Erro na imagem](https://github.com/liryelbeloaguiar/CronometroJava/blob/T/01/Captura%20de%20tela%202023-10-30%20094448.png)
 
