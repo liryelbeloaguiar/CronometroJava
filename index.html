@@ -1,0 +1,62 @@
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Cronometro</title>
+              <style>
+                  #container {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      height: 100vh;
+                      text-align: center;
+                  }
+                  #time {
+                      font-size: 48px;
+                      margin-bottom: 20px;
+                  }
+                  #start, #stop, #reset {
+                      font-size: 24px;
+                  }
+              </style>
+          </head>
+          <body>
+              <div id="container">
+                  <div id="time">0</div>
+                  <button id="start">Start</button>
+                  <button id="stop">Stop</button>
+                  <button id="reset">Reset</button>
+                  <script>
+                      var time = document.getElementById("time");
+                      var startButton = document.getElementById("start");
+                      var stopButton = document.getElementById("stop");
+                      var resetButton = document.getElementById("reset");
+                      var count = 0;
+                      var timer;
+                      startButton.addEventListener("click", function() {
+                          start();
+                      });
+                      stopButton.addEventListener("click", function() {
+                          stop();
+                      });
+                      resetButton.addEventListener("click", function() {
+                          reset();
+                      });
+                      function start() {
+                          timer = setInterval(update, 1000);
+                      }
+                      function stop() {
+                          clearInterval(timer);
+                      }
+                      function reset() {
+                          count = 0;
+                          time.innerText = count;
+                      }
+                      function update() {
+                          count++;
+                          time.innerText = count;
+                      }
+                  </script>
+              </div>
+          </body>
+          </html>
